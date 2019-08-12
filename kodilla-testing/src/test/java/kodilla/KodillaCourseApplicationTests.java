@@ -1,4 +1,4 @@
-package com.kodilla;
+package kodilla;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

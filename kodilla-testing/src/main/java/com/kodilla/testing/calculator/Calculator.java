@@ -10,9 +10,5 @@ public class Calculator {
        return a - b;
     }
 
-    public static void main(String[] args){
-        Calculator calculator = new Calculator();
-        calculator.calcAdd();
-        calculator.calcSub();
-    }
+
 }
