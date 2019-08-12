@@ -20,6 +20,7 @@ public class CollectionTestSuite {
     //Then
         Assert.assertEquals(0, testList2.size());
     }
+
     @Test
     public void testOddNumbersExterminatorNormalList() {
     //Given
