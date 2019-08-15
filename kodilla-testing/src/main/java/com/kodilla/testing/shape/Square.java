@@ -4,9 +4,8 @@ import java.util.Objects;
 
 public class Square implements Shape {
 
-
-    double a;
-    String name;
+    private double a;
+    private String name;
 
     public Square(double a, String name) {
         this.a = a;

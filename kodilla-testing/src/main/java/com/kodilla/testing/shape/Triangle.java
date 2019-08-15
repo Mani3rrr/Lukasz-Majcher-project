@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Triangle implements Shape {
 
-    double a;
-    double h;
-    String name;
+    private double a;
+    private double h;
+    private String name;
 
     public Triangle(double a, double h, String name) {
         this.a = a;
