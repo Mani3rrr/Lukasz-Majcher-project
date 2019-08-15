@@ -46,7 +46,8 @@ public class StatsTestSuite {
         when(statisticsmock.usersNames()).thenReturn(usersNames);
 
         //When
-        int usersQuantity = usersNames.size();
+        stats.calculateAdvStatistics(statisticsmock);
+        int usersQuantity = stats.getUsers();
 
         //Then
         Assert.assertEquals(100, usersQuantity);
@@ -62,9 +63,11 @@ public class StatsTestSuite {
         when(statisticsmock.usersNames()).thenReturn(usersNames);
 
         //When
-        int useresQuantity = usersNames.size();
+        stats.calculateAdvStatistics(statisticsmock);
+        int usersQuantity = stats.getUsers();
+
         //Then
-        Assert.assertEquals(0, useresQuantity);
+        Assert.assertEquals(0, usersQuantity);
     }
 
     @Test
@@ -76,7 +79,8 @@ public class StatsTestSuite {
         when(statisticsmock.postsCount()).thenReturn(0);
 
         //When
-        int postsQuantity = statisticsmock.postsCount();
+        stats.calculateAdvStatistics(statisticsmock);
+        int postsQuantity = stats.getPosts();
 
         //Then
         Assert.assertEquals(0, postsQuantity);
@@ -91,7 +95,8 @@ public class StatsTestSuite {
         when(statisticsmock.postsCount()).thenReturn(1000);
 
         //When
-        int postsQuantity = statisticsmock.postsCount();
+        stats.calculateAdvStatistics(statisticsmock);
+        int postsQuantity = stats.getPosts();
 
         //Then
         Assert.assertEquals(1000, postsQuantity);
@@ -106,7 +111,8 @@ public class StatsTestSuite {
         when(statisticsmock.commentsCount()).thenReturn(0);
 
         //When
-        int commentsQuantity = statisticsmock.commentsCount();
+        stats.calculateAdvStatistics(statisticsmock);
+        int commentsQuantity = stats.getComments();
 
         //Then
         Assert.assertEquals(0, commentsQuantity);
@@ -122,11 +128,12 @@ public class StatsTestSuite {
         when(statisticsmock.postsCount()).thenReturn(10);
 
         //When
-        int postsQuantity = statisticsmock.postsCount();
-        int commentsQuantity = statisticsmock.commentsCount();
+        stats.calculateAdvStatistics(statisticsmock);
+        int postsQuantity = stats.getPosts();
+        int commentsQuantity = stats.getComments();
 
         //Then
-        Assert.assertEquals(commentsQuantity/postsQuantity, stats.averageCommentsForPost(), 0);
+        Assert.assertEquals(10 ,commentsQuantity/postsQuantity);
     }
 
     @Test
@@ -139,10 +146,13 @@ public class StatsTestSuite {
         when(statisticsmock.postsCount()).thenReturn(100);
 
         //When
-        int postsQuantity = statisticsmock.postsCount();
-        int commentsQuantity = statisticsmock.commentsCount();
+
+        stats.calculateAdvStatistics(statisticsmock);
+        double postsQuantity = stats.getPosts();
+        double commentsQuantity = stats.getComments();
+
 
         //Then
-        Assert.assertEquals(commentsQuantity/postsQuantity, stats.averageCommentsForPost(), 0);
+        Assert.assertEquals(0.1 ,commentsQuantity/postsQuantity, 0);
     }
 }
