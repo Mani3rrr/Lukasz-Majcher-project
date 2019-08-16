@@ -155,4 +155,77 @@ public class StatsTestSuite {
         //Then
         Assert.assertEquals(0.1 ,commentsQuantity/postsQuantity, 0);
     }
+
+    @Test
+    public void TestAveragePostsForUser() {
+        //Given
+
+        Statistics statisticsmock = mock(Statistics.class);
+        Stats stats = new Stats();
+        String a = "b";
+        List<String> usersNames = new ArrayList<String>();
+        for(int i=0; i<100; i++) {
+            usersNames.add(a);
+        }
+        when(statisticsmock.postsCount()).thenReturn(300);
+        when(statisticsmock.usersNames()).thenReturn(usersNames);
+        //When
+
+        stats.calculateAdvStatistics(statisticsmock);
+        double Avg = stats.getAveragePostsForUser();
+
+        //Then
+        Assert.assertEquals(3 , Avg , 0);
+    }
+
+    @Test
+    public void TestAverageCommentsForUser() {
+        //Given
+
+        Statistics statisticsmock = mock(Statistics.class);
+        Stats stats = new Stats();
+        String a = "b";
+        List<String> usersNames = new ArrayList<String>();
+        for(int i=0; i<120; i++) {
+            usersNames.add(a);
+        }
+        when(statisticsmock.commentsCount()).thenReturn(800);
+        when(statisticsmock.usersNames()).thenReturn(usersNames);
+        //When
+
+        stats.calculateAdvStatistics(statisticsmock);
+        double Avg = stats.getAverageCommentsForUser();
+        Avg*=100;
+        Avg=Math.round(Avg);
+        Avg/=100;
+
+
+        //Then
+        Assert.assertEquals(6.67 ,Avg, 0);
+    }
+
+    @Test
+    public void TestAverageCommentsForPosts() {
+        //Given
+
+        Statistics statisticsmock = mock(Statistics.class);
+        Stats stats = new Stats();
+        when(statisticsmock.commentsCount()).thenReturn(800);
+        when(statisticsmock.postsCount()).thenReturn(115);
+        //When
+
+        stats.calculateAdvStatistics(statisticsmock);
+        double Avg = stats.getAverageCommentsForPost();
+        Avg*=100;
+        Avg=Math.round(Avg);
+        Avg/=100;
+
+
+        //Then
+        Assert.assertEquals(6.96 ,Avg, 0);
+    }
+
+
+
+
 }
