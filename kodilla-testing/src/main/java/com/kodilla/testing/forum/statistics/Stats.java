@@ -5,23 +5,23 @@ import java.util.List;
 
 public class Stats {
 
-    private int postsQuantity;
-    private int commentsQuantity;
-    private int usersQuantity;
+    private double postsQuantity;
+    private double commentsQuantity;
+    private double usersQuantity;
     private double averagePostsForUser;
     private double averageCommentsForUser;
     private double averageCommentsForPost;
 
 
-    public int getUsers() {
+    public double getUsers() {
         return usersQuantity;
     }
 
-    public int getPosts() {
+    public double getPosts() {
         return postsQuantity;
     }
 
-    public int getComments() {
+    public double getComments() {
         return commentsQuantity;
     }
 

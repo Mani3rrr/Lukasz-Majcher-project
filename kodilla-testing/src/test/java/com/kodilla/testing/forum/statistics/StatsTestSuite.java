@@ -47,10 +47,10 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int usersQuantity = stats.getUsers();
+        double usersQuantity = stats.getUsers();
 
         //Then
-        Assert.assertEquals(100, usersQuantity);
+        Assert.assertEquals(100, usersQuantity, 0);
     }
 
     @Test
@@ -64,10 +64,10 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int usersQuantity = stats.getUsers();
+        double usersQuantity = stats.getUsers();
 
         //Then
-        Assert.assertEquals(0, usersQuantity);
+        Assert.assertEquals(0, usersQuantity, 0);
     }
 
     @Test
@@ -80,7 +80,7 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int postsQuantity = stats.getPosts();
+        double postsQuantity = stats.getPosts();
 
         //Then
         Assert.assertEquals(0, postsQuantity);
@@ -96,10 +96,10 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int postsQuantity = stats.getPosts();
+        double postsQuantity = stats.getPosts();
 
         //Then
-        Assert.assertEquals(1000, postsQuantity);
+        Assert.assertEquals(1000, postsQuantity, 0);
     }
 
     @Test
@@ -112,10 +112,10 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int commentsQuantity = stats.getComments();
+        double commentsQuantity = stats.getComments();
 
         //Then
-        Assert.assertEquals(0, commentsQuantity);
+        Assert.assertEquals(0, commentsQuantity, 0);
     }
 
     @Test
@@ -129,11 +129,11 @@ public class StatsTestSuite {
 
         //When
         stats.calculateAdvStatistics(statisticsmock);
-        int postsQuantity = stats.getPosts();
-        int commentsQuantity = stats.getComments();
+        double postsQuantity = stats.getPosts();
+        double commentsQuantity = stats.getComments();
 
         //Then
-        Assert.assertEquals(10 ,commentsQuantity/postsQuantity);
+        Assert.assertEquals(10 ,commentsQuantity/postsQuantity, 0);
     }
 
     @Test
