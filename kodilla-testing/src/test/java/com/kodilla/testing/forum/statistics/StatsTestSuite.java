@@ -1,9 +1,6 @@
 package com.kodilla.testing.forum.statistics;
 
-import com.sun.org.glassfish.external.statistics.Statistic;
 
-import com.kodilla.testing.forum.statistics.Stats;
-import com.kodilla.testing.weather.stub.WeatherForecast;
 import org.junit.*;
 
 import java.util.ArrayList;
