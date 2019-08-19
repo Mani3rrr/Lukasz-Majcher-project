@@ -1,7 +1,6 @@
 package com.kodilla.stream.world;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 public final class Country {
     private final String countryName;
@@ -14,8 +13,5 @@ public final class Country {
 
     public BigDecimal getPeopleQuantity(){
         return peopleQuantity;
-    }
-    public String getCountryName(){
-        return countryName;
     }
 }

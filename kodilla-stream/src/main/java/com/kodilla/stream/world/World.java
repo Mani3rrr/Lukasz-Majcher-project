@@ -8,10 +8,6 @@ public class World {
 
     private List<Continent> continents = new ArrayList<>();
 
-    public void addContinent(Continent continent) {
-        continents.add(continent);
-    }
-
     public void addContinents(Continent continent) {
         continents.add(continent);
     }
