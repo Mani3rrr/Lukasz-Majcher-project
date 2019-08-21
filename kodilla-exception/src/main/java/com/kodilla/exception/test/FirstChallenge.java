@@ -1,8 +1,6 @@
 package com.kodilla.exception.test;
 
-import java.nio.file.Files;
 import java.time.LocalDate;
-import java.util.stream.Stream;
 
 public class FirstChallenge {
 
