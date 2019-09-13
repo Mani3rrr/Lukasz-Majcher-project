@@ -14,9 +14,12 @@ public class StreamMain {
 
         MovieStore movie = new MovieStore();
         Map<String, List<String>> moviesMap = movie.getMovies();
-        moviesMap.entrySet().stream()
+        String s = moviesMap.entrySet().stream()
                 .map(entry ->entry.getValue())
-                .map(e -> e.toString().replace("[","!").replace("]","!").replace(",","!"))
-                .forEach(System.out::println);
+                .map(List::toString)
+                .collect(Collectors.joining("!"));
+
+        System.out.println(s);
+
     }
 }
