@@ -9,4 +9,7 @@ include 'kodilla-stream'
 include 'kodilla-exception'
 include 'Game'
 include 'kodilla-good-patterns'
+include 'kodilla-spring-intro'
+include 'kodilla-spring-intro'
+include 'kodilla-spring'
 
