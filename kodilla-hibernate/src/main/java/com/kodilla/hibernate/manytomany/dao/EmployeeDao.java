@@ -11,9 +11,9 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface CompanyDao extends CrudRepository<Company, Integer> {
+public interface EmployeeDao extends CrudRepository<Employee, Integer> {
 
-    @Query(nativeQuery = true)
-    List<Company> retrieveCompanesWith3FirstLetters(@Param("LETTERS") String letters);
+    @Query
+    List<Employee> findEmployee(@Param("LASTNAME") String lastname);
 
 }
