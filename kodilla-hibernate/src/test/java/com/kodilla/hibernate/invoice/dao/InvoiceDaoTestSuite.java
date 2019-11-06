@@ -29,9 +29,9 @@ public class InvoiceDaoTestSuite {
         Product product2 = new Product("Telephone");
         Product product3 = new Product("Wallet");
 
-        Item item1 = new Item(product1, new BigDecimal(200), 2, new BigDecimal(400));
-        Item item2 = new Item(product1, new BigDecimal(200), 4, new BigDecimal(800));
-        Item item3 = new Item(product3, new BigDecimal(70), 1, new BigDecimal(70));
+        Item item1 = new Item(new BigDecimal(200), 2, new BigDecimal(400));
+        Item item2 = new Item( new BigDecimal(200), 4, new BigDecimal(800));
+        Item item3 = new Item(new BigDecimal(70), 1, new BigDecimal(70));
 
         Invoice invoice1 = new Invoice("F Number 1");
 
@@ -53,7 +53,7 @@ public class InvoiceDaoTestSuite {
         int invoice1Id = invoice1.getId();
 
         //Then
-        Assert.assertNotEquals(1, invoice1Id);
+        Assert.assertNotEquals(0, invoice1Id);
 
         //CleanUp
         try {
