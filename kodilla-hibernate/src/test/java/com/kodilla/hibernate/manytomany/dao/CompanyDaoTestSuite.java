@@ -103,11 +103,11 @@ public class CompanyDaoTestSuite {
 
         //when
         companyDao.save(company1);
-        int softwareMachineId = company1.getId();
+        int company1Id = company1.getId();
         companyDao.save(company2);
-        int dataMaestersId = company2.getId();
+        int company2Id = company2.getId();
         companyDao.save(company3);
-        int greyMatterId = company3.getId();
+        int company3Id = company3.getId();
         List<Company> companies = companyDao.retrieveCompanesWith3FirstLetters("Gab");
 
         //then
@@ -116,9 +116,9 @@ public class CompanyDaoTestSuite {
 
         //cleanup
         try {
-            companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
+            companyDao.deleteById(company1Id);
+            companyDao.deleteById(company2Id);
+            companyDao.deleteById(company3Id);
         } catch (Exception e) {
             //do nothing
         }
