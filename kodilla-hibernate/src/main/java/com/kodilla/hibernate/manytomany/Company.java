@@ -16,7 +16,7 @@ import java.util.List;
 
 @NamedQuery(
         name = "Company.retrieveCompany",
-        query = "FROM Company WHERE Compnay_Name LIKE :PHRASE"
+        query = "FROM Company WHERE Company_Name LIKE :PHRASE"
 )
 
 @Entity

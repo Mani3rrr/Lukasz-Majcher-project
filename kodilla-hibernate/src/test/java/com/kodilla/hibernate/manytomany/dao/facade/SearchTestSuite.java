@@ -48,6 +48,7 @@ public class SearchTestSuite {
         Assert.assertEquals(2, companies.size());
 
         companyDao.deleteAll();
+
     }
 
     @Test
