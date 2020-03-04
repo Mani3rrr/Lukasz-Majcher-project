@@ -25,7 +25,6 @@ public class SearchTestSuite {
     @Autowired
     private EmployeeDao employeeDao;
 
-
     @Test
     public void testSearchCompany(){
         //Given
@@ -48,7 +47,6 @@ public class SearchTestSuite {
         Assert.assertEquals(2, companies.size());
 
         companyDao.deleteAll();
-
     }
 
     @Test
